@@ -1,0 +1,9 @@
+<h3>Ahoy Mate!<br/>Please enter your name to join and share your question!</h3>
+
+  <div ng-repeat="error in errors" ng-bind="error.message">
+  </div>
+
+    <form>
+        Name: <input type='text' ng-model='user.name'><br>
+        <input type='submit' value='Login' ng-click='login(user)'>
+    </form>

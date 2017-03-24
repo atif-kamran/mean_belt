@@ -1,0 +1,21 @@
+{
+  "name": "belt_exam",
+  "homepage": "https://github.com/atif-kamran/python_multiples",
+  "authors": [
+    "Atif Kamran <atifbkamran@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3"
+  }
+}

@@ -1,0 +1,11 @@
+<h1>Post a new poll!</h1>
+
+<div ng-repeat="error in errors" ng-bind="error.message">
+</div>
+
+  <form ng-submit="createPoll(poll)">
+      First Name: <input type='text' ng-model='user.first_name'><br>
+      Last Name: <input type='text' ng-model='user.last_name'><br>
+      Birthday: {{user.birthday | date: dd-MM-yyyy}} <input type="date" ng-model='user.birthday'><br>
+      <input type='submit' value='Edit User'>
+  </form>

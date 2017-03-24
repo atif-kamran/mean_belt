@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- DONT FORGET TO ADD YOUR ANGULAR APP! -->
+<html ng-app="beltApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Random Polls</title>
+    <!-- Angular from bower_components, otherwise find the CDN -->
+    <script src="angular/angular.min.js" charset="utf-8"></script>
+    <script src="angular-route/angular-route.js" charset="utf-8"></script>
+    <!-- End Bower Components -->
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+   	<script>
+   			var socket = io.connect();
+   	</script>
+    <script src="assets/app.js" charset="utf-8"></script>
+    <script src="assets/factories/userFactory.js" charset="utf-8"></script>
+    <script src="assets/controllers/usersController.js" charset="utf-8"></script>
+    <script src="assets/controllers/dashboardController.js" charset="utf-8"></script>
+    <script src="assets/controllers/showsController.js" charset="utf-8"></script>
+    <script src="assets/controllers/pollsController.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/static/style.css">
+
+  </head>
+  <body>
+    <!-- Links to your new and edit pages here.  Review Angular Partials if you've forgotten ) -->
+    <div ng-view="">
+      <!-- Partials will load here -->
+    </div>
+  </body>
+</html>
+
+<!--
+
+    EMIT:
+    	socket.emit('my_emit_event');
+    BROADCAST:
+    	socket.broadcast.emit("my_broadcast_event");
+    FULL BROADCAST:
+    	io.emit("my_full_broadcast_even");
+}) -->

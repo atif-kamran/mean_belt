@@ -1,0 +1,23 @@
+<h1>Welcome <span ng-bind="user.name"></span></h1>
+<p> Dashboard | <a href='#!/'>Logout</a></p>
+<p><a href="#!/create">Create a Poll</a></p>
+<input placeholder="Search" type="text" ng-model="query">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Survey Question</th>
+        <th>Date Posted</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="poll in polls | filter: query">
+        <td>{{poll.user_id.name}}</td>
+        <td>{{poll.question}}</td>
+        <td>{{poll.created_at}}</td>
+        <td><input type="submit" value="Delete" ng-click="delete(user)"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
